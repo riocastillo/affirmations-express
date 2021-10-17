@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Affirmations</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Londrina+Solid:wght@100;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="wholeThing">
+    <section class="title">
+      <h1 id="black">We see you Black kid</h1>
+      <h1>We see you Brown kid</h1>
+      <h2>Affirmations and love notes to remind our kids of how loved they always are.</h2>
+      <p id="descriptor">
+        If you are a caregiver, educator, or someone blessed to have young people in your life, we hope you share this with them. We believe that Black and brown kids deserve to play, learn, be safe, and be young. Unapologetically. And they deserve to have their childhood protected and affirmed. Post a love note, reminder, or affirmation for the young ones in your life here.
+      </p>
+    </section>
+    <section class="notesFromOthers">
+      <section class="othersTitle">
+        <img src="smiles.png" id="smiles">
+      <h3 id="othersTitle">Notes from others</h3>
+      <h2 id="read">Read and react to the notes other people left behind.</h2>
+    </section>
+      <ul class="messages">
+        <% for(var i=0; i<messages.length; i++) {%>
+          <li class="message">
+            <span><%=messages[i].msg%></span><br><br>
+            <span><%=messages[i].thumbUp%></span>
+            <span id="<%=messages[i]._id%>"></span>
+            <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+            <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+          </li>
+          <% } %>
+      </ul>
+    </section>
+    <section class="yourNote">
+      <h3 id="noteTitle">Your note</h3>
+      <form action="/messages" method="POST" >
+        <textarea type="text" placeholder="" name="msg"></textarea>
+        <button type="submit">add your note to the message board</button>
+      </form>
+    </section>
+  </section>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
