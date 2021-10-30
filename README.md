@@ -1,4 +1,8 @@
 <img src = "affirmations.gif" width= 100%>
+<img src = "affirm-1.png" width= 100%>
+<img src = "affirm-2.png" width= 100%>
+<img src = "affirm-3.png" width= 100%>
+<img src = "affirm-4.png" width= 100%>
 
 ## Goal
 Create an app where users can access, update, and interact with a messageboard filled with affirmations, love letters, and reminders to Black and Brown kids.
